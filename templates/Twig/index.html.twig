@@ -1,17 +1,20 @@
 {% extends 'base.html.twig' %}
-{% block title %} Hello!!{% endblock %}
-{% block body %}
-<section class="produit">
-{% for Produit in produit %}
-<Produit>
-<h2>{{Produit.name}}</h2>
-<h2>{{Produit.prix}}</h2>
-<h2>{{Produit.Category}}</h2>
-<div class="metadata">Ecrit le {{produit.createdAt | date('d/m/y')}}Dans category</div>
-<div class="discription">
-<div>
-<a href="{{path('blog_show',{'id':Produit.id})}}" class="btn btn-primary">Affichers details</a>
-</div>
-</Produit>
-{% endfor %}
+{% block title %}
+	Hello!!
 {% endblock %}
+{% block body %}
+	<section class="produit">
+		{% for Produit in produit %}
+			<Produit>
+				<h2>{{Produit.name}}</h2>
+				<h2>{{Produit.prix}}</h2>
+				<h2>{{Produit.Category}}</h2>
+				<div class="metadata">
+
+					<div class="discription">
+						<div>
+							<a href="{{path('produits_show',{'id':Produit.id})}}" class="btn btn-primary">Affichers details</a>
+						</div>
+					</Produit>
+				{% endfor %}
+			{% endblock %}
