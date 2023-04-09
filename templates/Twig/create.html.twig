@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+{% form_theme formproducts 'bootstrap_4_layout.html.twig'%}
+{% block body %}
+<h1>Ajouter produit</h1>
+{{form_start(formproducts)}}
+
+{{ form_row(formproducts.name)}}
+{{ form_row(formproducts.prix)}}
+{{ form_row(formproducts.discription) }}
+{{form_row(formproducts.Category)}}
+  
+  <button type="submit" class="btn btn-success">Ajouter</button>
+{{form_end(formproducts)}}
+{% endblock %}

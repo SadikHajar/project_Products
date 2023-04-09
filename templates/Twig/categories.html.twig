@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block title %} Hello!!{% endblock %}
+{% block body %}
+<section class="category">
+{% for category in category %}
+<category>
+<h2>{{category.name}}</h2>
+<hr> </hr>
+</category>
+{% endfor %}
+</section>
+{% endblock %}

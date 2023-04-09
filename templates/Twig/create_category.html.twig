@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+{% form_theme formCategory 'bootstrap_4_layout.html.twig'%}
+{% block body %}
+<h1>Ajouter categorie</h1>
+{{form_start(formCategory)}}
+{{form_row(formCategory.name)}}
+<button href="{{path('categories')}}" type="submit" class="btn btn-success">Ajouter</button>
+{{form_end(formCategory)}}
+{% endblock %}

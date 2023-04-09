@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+<produit>
+<h2>{{produit.name}}</h2>
+<h2>{{produit.prix}}</h2>
+<div class="metadata">Ecrit le {{produit.createdAt | date('d/m/y')}}Dans category</div>
+<div class="discription">
+{{produit.discription | raw}}
+<hr>
+</div>
+</produit>
+{% endblock body %}
