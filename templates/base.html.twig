@@ -7,7 +7,7 @@
 			{% endblock %}
 		</title>
 		<link
-		rel="icon" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+		rel="stylesheet" href="https://bootswatch.com/5/darkly/bootstrap.min.css">
 		{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
 		{% block stylesheets %}
 			{{ encore_entry_link_tags('app') }}
@@ -19,11 +19,9 @@
 	</head>
 	<body>
 		{% block body %}{% endblock %}
-	</body>
-</html>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 	<div class="container-fluid">
-		<a class="navbar-brand" href="#">Navbar</a>
+		<a class="navbar-brand" href="#">Produits</a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
@@ -35,6 +33,10 @@
 					</a>
 				</li>
 				<li class="nav-item">
+					<a class="nav-link" href="/login">sing in</a>
+				</li>	
+				</li>
+				<li class="nav-item">
 					<a class="nav-link" href="/produits/new">Ajouter produit</a>
 				</li>
 				<li class="nav-item">
@@ -43,15 +45,24 @@
 				<li class="nav-item">
 					<a class="nav-link" href="/create_category">Ajoute categories</a>
 				</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="/categories" role="button" aria-haspopup="true" aria-expanded="false">listes des categories</a>
-					<div class="dropdown-menu">
-						<a class="dropdown-item" href="/produits_categories">Affiches tous</a>
-						<div class="dropdown-divider"></div>
-
+				<li class="nav-item">
+					<a class="nav-link" href="/categories">Listes des categories</a>
+				</li>
+				
+						
+						
 					</div>
 				</li>
 			</ul>
 		</div>
 	</div>
 </nav>
+      <div class="container">
+	  </div>
+	  
+
+	</body>
+
+
+</html>
+
